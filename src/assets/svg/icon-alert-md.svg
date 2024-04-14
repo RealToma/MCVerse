@@ -1,0 +1,13 @@
+<svg width="36" height="34" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#a)">
+        <path
+            d="M31.685 25.945c.897 1.555-.23 3.5-2.021 3.5H6.336c-1.796 0-2.917-1.948-2.021-3.5L15.979 5.722c.898-1.556 3.146-1.554 4.042 0l11.664 20.223ZM18 21.764a2.236 2.236 0 1 0 0 4.472 2.236 2.236 0 0 0 0-4.472Zm-2.123-8.038.36 6.611c.018.31.273.552.583.552h2.36c.31 0 .566-.242.582-.552l.361-6.61a.583.583 0 0 0-.582-.616h-3.082c-.334 0-.6.281-.582.615Z"
+            fill="#00E0FF" />
+    </g>
+    <defs>
+        <filter id="a" x="0" y=".556" width="36" height="32.889" filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB">
+            <feBlend in="SourceGraphic" in2="effect1_dropShadow_557_5138" result="shape" />
+        </filter>
+    </defs>
+</svg>

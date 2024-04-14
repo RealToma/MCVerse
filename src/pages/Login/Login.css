@@ -1,0 +1,10 @@
+.connect-wallet {
+  background: linear-gradient(
+    180deg,
+    rgba(14, 112, 159, 0.5) 0%,
+    rgba(200, 200, 200, 0) 93.79%
+  );
+  border-top: 3px solid rgb(14, 112, 159);
+  border-radius: 30px;
+  position: relative;
+}

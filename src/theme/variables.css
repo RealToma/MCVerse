@@ -1,0 +1,7 @@
+:root {
+  --farm-list-gradient: linear-gradient(0deg, #00000000 0%, #000000 100%);
+  --farm-item-gradient: linear-gradient(90deg, #FFFFFF 0%, #00000000);
+  --farm-item-grid-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0) -78.72%, #000000 100%);
+  --farm-detail-gradient: linear-gradient(90deg, rgba(255, 206, 0, 0.08) 0%, rgba(255, 208, 8, 0.22) 49.48%, rgba(255, 206, 0, 0.08) 100%);
+  --screw-hole-gradient: radial-gradient(50% 50% at 50% 50%, #F4F4F4 0%, rgba(217, 217, 217, 0.58) 100%);
+}

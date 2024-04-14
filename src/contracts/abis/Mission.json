@@ -1,0 +1,326 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract Nft",
+        "name": "qualifyingNft",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "completeMission",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "completionCount",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "meta",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "duration",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxCompletionCount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "globalMaxCompletionCount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "contract IERC721",
+        "name": "qualifyingNft",
+        "type": "address"
+      },
+      {
+        "internalType": "contract Nft[]",
+        "name": "entryNfts",
+        "type": "address[]"
+      },
+      {
+        "internalType": "contract Nft[]",
+        "name": "rewardNfts",
+        "type": "address[]"
+      }
+    ],
+    "name": "createMission",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "currentlyInMission",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "missionId",
+        "type": "uint256"
+      }
+    ],
+    "name": "disableMission",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "missionId",
+        "type": "uint256"
+      }
+    ],
+    "name": "enableMission",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "missionId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "contract Nft",
+        "name": "qualifyingNft",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "enterMission",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getMissions",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "active",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "meta",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "duration",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxCompletionCount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "globalMaxCompletionCount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "globalCompletionCount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "currentlyInMission",
+            "type": "uint256"
+          },
+          {
+            "internalType": "contract IERC721",
+            "name": "qualifyingNft",
+            "type": "address"
+          },
+          {
+            "internalType": "contract Nft[]",
+            "name": "entryNfts",
+            "type": "address[]"
+          },
+          {
+            "internalType": "contract Nft[]",
+            "name": "rewardNfts",
+            "type": "address[]"
+          }
+        ],
+        "internalType": "struct Missions.MissionView[]",
+        "name": "missionViews",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "contract IERC721",
+            "name": "qualifyingNft",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Missions.QualifyingNftInput[]",
+        "name": "qualifyingNftInputs",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "getQualifyingNfts",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "inMission",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "missionId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "missionEndsAt",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "completionCounts",
+            "type": "uint256[]"
+          }
+        ],
+        "internalType": "struct Missions.QualifyingNftView[]",
+        "name": "qualifyingNftViews",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract Nft",
+        "name": "qualifyingNft",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "quitMission",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

@@ -1,0 +1,25 @@
+.mission-detail-container {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translate(100%, 100%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+table.mission-select-car tbody tr.active {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.24) 0.06%,
+    rgba(255, 255, 255, 0) 99.93%
+  ) !important;
+  font-weight: bold;
+  border: 1px solid #42ec7c;
+  border-left: 0;
+  border-right: 0;
+  position: relative;
+}
