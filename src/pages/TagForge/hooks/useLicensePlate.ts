@@ -1,11 +1,11 @@
 import { useCallback } from 'react'
 
 import { notifyToast } from 'config/toast'
-import { mcvContract, plateNFTContract } from 'config/web3'
+import { contractRegister, mcvContract, plateNFTContract } from 'config/web3'
 import { useGetContract, useWeb3 } from 'hooks'
 import { useAppDispatch } from 'state/hooks'
 import { useGetLicensePlateReducerValues } from 'state/tagForge/hooks'
-import { setForgeInitialize, setIsLoading, setLicensePlate, setMintPrice } from 'state/tagForge/reducer'
+import { setForgeInitialize, setIsLoading, setLicensePlate, setMintPrice, setMintRule } from 'state/tagForge/reducer'
 import { createLicensePlate } from 'utils/api'
 import { executeSingleReadContract, executeSingleWriteContract } from 'utils/helper'
 
@@ -29,6 +29,28 @@ export const useGetMintPrice = () => {
       console.error(error)
     }
   }, [dispatch, plateMintContract])
+}
+
+export const useGetRule = () => {
+  const registerContract = useGetContract(contractRegister)
+
+  const dispatch = useAppDispatch()
+
+  const handleGetRule = useCallback(async () => {
+    try {
+      if (!registerContract) return
+
+      const mintRule = await executeSingleReadContract(registerContract, 'getRules', [])
+
+      if (mintRule) {
+        dispatch(setMintRule(mintRule))
+      }
+    } catch (error) {
+      console.error(error)
+    }
+  }, [dispatch, registerContract])
+
+  return { handleGetRule }
 }
 
 export const useSetPlateToStore = () => {

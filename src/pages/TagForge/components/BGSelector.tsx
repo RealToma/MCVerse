@@ -18,7 +18,10 @@ const BackgroundSelector = ({ region }: any) => {
                   ? 'rounded-[10px]  border-[3px]  border-solid border-cyan-200'
                   : 'border-[3px] border-[rgba(0,0,0,0)]'
               }`}
-              onClick={() => handleLicensePlate('backgroundImgId', id)}
+              onClick={() => {
+                handleLicensePlate('backgroundImgId', id)
+                handleLicensePlate('backgroundCountry', PLATE_BACKGROUND_LIST[id]?.name)
+              }}
             >
               <img src={PLATE_BACKGROUND_LIST[id]?.image} className="w-32 h-auto rounded-[6px]" />
             </div>

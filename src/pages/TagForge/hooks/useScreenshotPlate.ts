@@ -12,6 +12,7 @@ export const usePlateScreenshot = () => {
   const handleScreenShot = useCallback(async () => {
     if (ref.current === null) return
 
+    console.log('aaa', ref.current)
     const imgBlob = await toBlob(ref.current, { cacheBust: true })
 
     dispatch(setScreenShot(imgBlob))

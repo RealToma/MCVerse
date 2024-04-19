@@ -1,5 +1,6 @@
 export interface ILicensePlate {
   backgroundImgId: number
+  backgroundCountry: string
   tagText: string
   fontStyleId: number
   color: {
@@ -21,4 +22,11 @@ export interface IForgeStep {
   name: string
   status: boolean
   btnText: string
+}
+
+export interface IMintRule {
+  minCharacters: number
+  maxCharacters: number
+  allowedCharacters: string
+  backgrounds: string[]
 }
