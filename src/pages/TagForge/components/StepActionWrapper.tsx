@@ -14,7 +14,8 @@ const StepActionsWrapper = ({ region }: any) => {
       ) : currentStepId === 2 ? (
         <TagTextCreator />
       ) : currentStepId === 3 ? (
-        <FontColorSelector />
+        // <FontColorSelector />
+        <></>
       ) : (
         <></>
       )}

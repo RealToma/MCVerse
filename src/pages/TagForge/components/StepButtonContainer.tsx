@@ -90,11 +90,12 @@ const StepButtonContainer = ({ handleScreenShot }: { handleScreenShot: () => Pro
           }
           if (currentStepId === 3) {
             // await handleScreenShot()
-            handleForgeStep(currentStepId + 1)
-          }
-          if (currentStepId === 4) {
+            // handleForgeStep(currentStepId + 1)
             handleMintPlate()
           }
+          // if (currentStepId === 4) {
+          //   handleMintPlate()
+          // }
         }}
       >
         {`next step: `}
